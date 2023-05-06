@@ -153,12 +153,10 @@ class Bank:
     self.users = {}
 
   def add_admin_user(self, username, password):
-    # Add an admin user with the given username and password
     self.users[username] = {'password': password, 'is_admin': True}
 
   def add_customer(self, first_name, last_name, username, password,
                    initial_balance):
-    # Add a customer with the given name, username, password, and initial balance
     self.users[username] = {'password': password, 'is_admin': False}
     account_number = len(self.accounts) + 1
     self.accounts[account_number] = {
@@ -168,14 +166,13 @@ class Bank:
     return account_number
 
 
-# Create an instance of the Bank class
 bank = Bank()
 
-# Add an admin user and a customer to the bank
+# adds admin user
 bank.add_admin_user("admin", "1234")
 account_number = bank.add_customer("John", "Doe", "1111", "1234", 1000.00)
 
-# Main menu loop
+# main menu
 while True:
   print("""
         ╭━━━━━━━━━━━━━━━━━━━━━━━╮
@@ -248,5 +245,4 @@ while True:
   else:
     print("Invalid choice")
 
-# Close the database connection
 connection.close()
