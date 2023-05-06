@@ -57,7 +57,7 @@ def new_account():
     initial_balance = float(input("Enter initial balance: "))
     add_user(account_number, pin, name, email)
     create_account(account_number, initial_balance)
-    print("Account created successfully!")
+    print("Account created successfully")
 
 def login(account_number, pin):
     query = """
