@@ -2,7 +2,7 @@ import mysql.connector
 
 connection = mysql.connector.connect(host='localhost',
                                      user='root',
-                                     password='x1104PF!',
+                                     password='12345',
                                      database='banking_app')
 
 cursor = connection.cursor()
